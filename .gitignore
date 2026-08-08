@@ -1,6 +1,14 @@
-
 # Local database
 attendance.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment and sensitive configuration
+.env
+.env.*
+*.key
+*.pem
 
 # XAMPP / local environment
 xampp/
