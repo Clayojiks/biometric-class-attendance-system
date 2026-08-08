@@ -1,0 +1,164 @@
+/* Profile Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Information Rows */
+.info-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-label {
+    width: 140px;
+    font-weight: 600;
+    color: #555;
+}
+
+.info-value {
+    flex: 1;
+    color: #333;
+}
+
+/* Fingerprint Status Badges */
+.fingerprint-enrolled {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: #e8f5e9;
+    color: #27ae60;
+}
+
+.fingerprint-not-enrolled {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background: #fff3e0;
+    color: #e67e22;
+}
+
+/* Course List */
+.course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+
+.course-list li strong {
+    color: #003366;
+    font-size: 0.9rem;
+}
+
+.course-list li span {
+    font-size: 0.75rem;
+    color: #666;
+    display: block;
+    margin-top: 3px;
+}
+
+/* Password Form */
+.password-form {
+    margin-top: 10px;
+}
+
+.password-hint {
+    font-size: 0.65rem;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Input Group for Password Form */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #8B0000;
+    box-shadow: 0 0 5px rgba(139,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #003366;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #8B0000;
+    transform: translateY(-2px);
+}
+
+/* Error and Success Messages */
+.error-message {
+    background: #ffebee;
+    color: #8B0000;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #8B0000;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #27ae60;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #27ae60;
+}

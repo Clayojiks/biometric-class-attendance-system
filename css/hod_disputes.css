@@ -1,0 +1,135 @@
+/* hod_disputes.css */
+.disputes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 900px) {
+    .disputes-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dispute-card {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.dispute-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dispute-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.student-name {
+    font-weight: bold;
+    color: #003366;
+    font-size: 1rem;
+}
+
+.student-reg {
+    font-size: 0.7rem;
+    color: #888;
+    margin-left: 5px;
+}
+
+.course-info {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.lecturer-name {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 3px;
+}
+
+.dispute-reason {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    border-left: 3px solid #e67e22;
+}
+
+.pending-badge {
+    background: #e67e22;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.resolved-badge {
+    background: #27ae60;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.rejected-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.resolution-notes-display {
+    font-size: 0.75rem;
+    color: #27ae60;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #ddd;
+}
+
+.info-box {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: #1565c0;
+}
+
+.badge-count {
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    margin-left: 8px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

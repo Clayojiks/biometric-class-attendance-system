@@ -1,0 +1,129 @@
+/* hod_profile.css - HOD Profile Page Styles */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Personal Information Card */
+.info-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-label {
+    width: 140px;
+    font-weight: 600;
+    color: #555;
+}
+
+.info-value {
+    flex: 1;
+    color: #333;
+}
+
+.hod-badge {
+    background: #f39c12;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Change Password Card */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #8B0000;
+    box-shadow: 0 0 5px rgba(139,0,0,0.3);
+}
+
+.password-hint {
+    font-size: 0.65rem;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn-update {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.btn-update:hover {
+    background: #8B0000;
+    transform: translateY(-2px);
+}
+
+/* Error and Success Messages */
+.error-message {
+    background: #ffebee;
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #c0392b;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #27ae60;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #27ae60;
+}
+
+/* Password Match Indicator */
+.password-match {
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+.password-match.valid {
+    color: #27ae60;
+}
+
+.password-match.invalid {
+    color: #e74c3c;
+}

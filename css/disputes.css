@@ -1,0 +1,390 @@
+/* Disputes Grid Layout */
+.disputes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+    .disputes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Submit Dispute Form Styles */
+.dispute-info {
+    background: #e3f2fd;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+    border-left: 4px solid #2196f3;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.required-star {
+    color: #e74c3c;
+}
+
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #8B0000;
+    box-shadow: 0 0 5px rgba(139,0,0,0.2);
+}
+
+.hint-text {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #003366, #8B0000);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139,0,0,0.3);
+}
+
+/* No Absent Records */
+.no-absent-records {
+    text-align: center;
+    padding: 30px;
+    background: #e8f5e9;
+    border-radius: 10px;
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.small-text {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Card Header with Count */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dispute-count {
+    font-size: 0.75rem;
+    color: #666;
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* Dispute Item */
+.dispute-item {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.dispute-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dispute-item.pending {
+    border-left: 4px solid #e67e22;
+}
+
+.dispute-item.resolved {
+    border-left: 4px solid #27ae60;
+}
+
+.dispute-item.rejected {
+    border-left: 4px solid #e74c3c;
+}
+
+.dispute-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dispute-course-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.dispute-course {
+    font-weight: bold;
+    color: #003366;
+    font-size: 0.85rem;
+}
+
+.dispute-course-title {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.dispute-date {
+    font-size: 0.7rem;
+    color: #888;
+    background: #f0f0f0;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.dispute-details {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.dispute-submitted {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.dispute-reason-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.dispute-reason {
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.5;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.dispute-status-area {
+    padding: 12px 15px;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+}
+
+.status-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    margin-right: 8px;
+}
+
+.status-pending {
+    display: inline-block;
+    background: #fff3e0;
+    color: #e67e22;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.status-resolved {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #27ae60;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.status-rejected {
+    display: inline-block;
+    background: #ffebee;
+    color: #e74c3c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.status-message {
+    font-size: 0.7rem;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.success-message-small {
+    background: #e8f5e9;
+    color: #27ae60;
+}
+
+.error-message-small {
+    background: #ffebee;
+    color: #e74c3c;
+}
+
+.dispute-resolution {
+    padding: 12px 15px;
+    background: #f0f7f0;
+    border-top: 1px solid #d4e6d4;
+}
+
+.resolution-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #27ae60;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.resolution-text {
+    font-size: 0.75rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* No Disputes State */
+.no-disputes {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Information Card */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.info-card-header span {
+    font-size: 1.2rem;
+}
+
+.info-card-header h4 {
+    font-size: 1rem;
+    color: #003366;
+}
+
+.info-card-body {
+    padding: 15px 20px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.info-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Error and Success Messages */
+.error-message {
+    background: #ffebee;
+    color: #8B0000;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #8B0000;
+}
+
+.success-message {
+    background: #e8f5e9;
+    color: #27ae60;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    border-left: 4px solid #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .dispute-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

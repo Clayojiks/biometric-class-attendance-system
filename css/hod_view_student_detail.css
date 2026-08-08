@@ -1,0 +1,70 @@
+/* hod_student_detail.css */
+.student-header {
+    background: linear-gradient(135deg, #003366, #8B0000);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.student-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.overall-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.overall-percentage {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #003366;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.eligible {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.ineligible {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+

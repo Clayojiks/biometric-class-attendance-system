@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="attendance.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2479"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="enrollment" custom_title="0" dock_id="1" table="4,10:mainenrollment"/><dock_state state="000000ff00000000fd00000001000000020000015c0000024efc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000015c0000011e00ffffff0000015c0000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="attendance" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="31"/><column index="2" value="70"/><column index="3" value="64"/><column index="4" value="38"/><column index="5" value="62"/><column index="6" value="62"/><column index="7" value="78"/><column index="8" value="156"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="courses" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="78"/><column index="3" value="300"/><column index="4" value="71"/><column index="5" value="88"/><column index="6" value="59"/><column index="7" value="92"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="enrollment" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="70"/><column index="3" value="64"/><column index="4" value="85"/><column index="5" value="92"/><column index="6" value="156"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">SELECT * FROM students WHERE id=1;
+SELECT id, course_code, total_sessions FROM courses;
+SELECT COUNT(*) as count FROM attendance WHERE student_id = 1;
+SELECT * FROM enrollment WHERE student_id = 1;
+
+SELECT
+      c.course_code,
+	  COUNT(CASE WHEN a.status = 'present' THEN 1 END) as attended,
+	  COUNT(CASE WHEN a.status = 'absent' THEN 1 END) as missed,
+	  c.total_sessions,
+	  ROUND(COUNT(CASE WHEN a.status = 'present' THEN 1 END) * 100.0 / c.total_sessions) as percentage
+	  FROM attendance a
+	  JOIN courses c ON a.course_id = c.id
+	  WHERE a.student_id = 1
+	  GROUP BY a.course_id;
+	  
+	SELECT 
+	  c.id,
+	  c.course_code,
+	  c.total_sessions,
+	  COUNT(a.id) as actual_records
+	FROM courses c
+	LEFT JOIN attendance a ON c.id = a.course_id AND a.student_id = 1
+	GROUP BY c.id;
+	
+	UPDATE courses SET total_sessions = (
+	   SELECT COUNT(*)
+	   FROM attendance
+	   WHERE attendance.course_id = courses.id AND attendance.student_id = 1
+	   );
+	   
+	   SELECT *
+	   FROM attendance
+	   WHERE (student_id, course_id,week) IN (
+	      SELECT student_id, course_id, week
+		  FROM attendance
+		  GROUP BY student_id, course_id,week
+		  HAVING COUNT(*) &gt; 1
+		  )
+		  ORDER BY student_id, course_id, week;
+		  
+		  SELECT 
+		    student_id,
+			course_id,
+			week,
+			COUNT(*) as duplicate_count
+		FROM attendance
+		GROUP BY student_id, course_id, week
+		HAVING COUNT (*) &gt; 1;
+		
+		DELETE FROM attendance
+		WHERE id NOT IN (
+		       SELECT MIN(id)
+			   FROM attendance
+			   GROUP BY student_id, course_id, week
+			   );
+			
+			
+SELECT 
+    student_id,
+    course_id,
+    week,
+    COUNT(*) as duplicate_count
+FROM attendance
+GROUP BY student_id, course_id, week
+HAVING COUNT(*) &gt; 1;
+
+
+SELECT * FROM attendance WHERE student_id = 1 ORDER BY course_id, week;
+
+SELECT 
+    course_id,
+    COUNT(*) as record_count
+FROM attendance
+WHERE student_id = 1
+GROUP BY course_id;
+
+
+
+SELECT * FROM courses;
+	    
+	   
+	  
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
