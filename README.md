@@ -101,6 +101,35 @@ The Arduino handles communication with the fingerprint sensor and other hardware
 The DS3231 RTC provides date and time information, while the LCD provides feedback to the user during the attendance process.
 
 The web application manages students, lecturers, courses, attendance records, attendance percentages, and examination eligibility.
+## System Screenshots
+
+The following screenshots demonstrate the main interfaces and functionality of the Biometric Class Attendance Management System.
+
+### Login Page
+
+![Login Page](screenshots/login_page.png)
+
+### Student Dashboard
+
+![Student Dashboard](screenshots/student_dashboard.png)
+
+### Lecturer Dashboard
+
+![Lecturer Dashboard](screenshots/lecturer_dashboard.png)
+
+### HOD Dashboard
+
+![HOD Dashboard](screenshots/hod_dashboard.png)
+
+### Attendance and Examination Eligibility
+
+![Attendance and Eligibility](screenshots/eligibility_list.png)
+
+![Attendance and Eligibility](screenshots/student_attendance.png)
+
+### Fingerprint enrollment
+
+![fingerprint enrollment](screenshots/fingerprint_enrollment.png)
 
 ## Hardware Communication
 
