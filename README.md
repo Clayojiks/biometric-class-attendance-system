@@ -131,6 +131,20 @@ The following screenshots demonstrate the main interfaces and functionality of t
 
 ![fingerprint enrollment](screenshots/fingerprint_enrollment.png)
 
+### Hardware connections
+
+![Arduino and breadboard](screenshots/arduino_USB.jpeg)
+
+![breadboar](screenshots/breadboard-lcd_active.jpeg)
+
+![Connections_jump wires](screenshots/connections.jpeg)
+
+### Sensor test and Arduino IDE
+
+![sensor testing](screenshots/sensor_active.jpeg)
+
+![sensortest](screenshots/sensortest_arduino.jpeg)
+
 ## Hardware Communication
 
 The Arduino Uno communicates with the AS608 fingerprint sensor using serial communication.
